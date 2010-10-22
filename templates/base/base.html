@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>
+    {% block title %}
+    {% endblock %}
+    - Edwin Jaury
+  </title>
+	<meta http-equiv="Content-Language" content="en-us" />
+	
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	
+	<meta name="description" content="Description" />
+	<meta name="keywords" content="Keywords" />
+	
+	<meta name="author" content="Edwin Jaury" />
+
+  <style type="text/css" title="currentStyle">
+    @import url("{{ MEDIA_URL }}css/style.css");
+  </style>
+
+  {% block extra_head %}
+  {% endblock %}
+
+</head>
+
+<body>
+  <div id="header">
+  </div>
+
+  <div id="body">
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+
+  <div id="footer">
+    Copyright 2010 Edwin Jaury. All rights reserved.
+  </div>
+</body>
+
+</html>

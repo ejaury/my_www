@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+Image Downloader
+{% endblock %}
+
+{% block content %}
+<form action="/image_scraper/" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+{% endblock %}

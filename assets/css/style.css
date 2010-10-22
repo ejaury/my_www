@@ -1,0 +1,10 @@
+html, body {
+  /* reset default margins and paddings in browsers */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Tahoma, Arial, Sans-serif;
+  font-size: 100%;
+}
