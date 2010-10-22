@@ -5,9 +5,11 @@ Image Downloader
 {% endblock %}
 
 {% block content %}
+<p>This service allows you to enter URL or link of pictures you want to
+download as album. It may take a few minutes to complete.</p>
 <form action="/image_downloader/" method="post">
 {% csrf_token %}
 {{ form.as_p }}
-<input type="submit" value="Submit" />
+<input type="submit" value="Download Album" />
 </form>
 {% endblock %}
