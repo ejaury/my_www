@@ -3,6 +3,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    ('^image_scraper/$', 'services.image_scraper.views.index'),
+    ('^image_downloader/$', 'services.image_downloader.views.index'),
     (r'^admin/', include(admin.site.urls)),
 )

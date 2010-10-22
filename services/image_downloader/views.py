@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from image_scraper.forms import ImageDownloaderForm
+from image_downloader.forms import ImageDownloaderForm
 
 def index(request):
   if request.method == 'POST':
@@ -11,7 +11,7 @@ def index(request):
   else:
     form = ImageDownloaderForm()
 
-  return render_to_response('image_scraper/index.html', {
+  return render_to_response('image_downloader/index.html', {
                               'form': form,
                             },
                             context_instance=RequestContext(request))
