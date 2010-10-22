@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+User Login
+{% endblock %}
+
+{% block content %}
+  <div id="login">
+    <h3>Login</h3>
+    <form id="login_form" action="{{ request.path }}?next={{ next }}" method="post">
+      {% csrf_token %}
+      <table>
+        {{ form.as_table }}
+      </table>
+      <input class="submit" type="submit" value="Login" />
+    </form>
+  </div>
+{% endblock %}

@@ -1,3 +1,4 @@
+from django.contrib.auth.views import redirect_to_login
 from django.core.servers.basehttp import FileWrapper
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
@@ -8,6 +9,9 @@ import subprocess as sub
 import settings
 
 def index(request):
+  if not request.user.is_authenticated():
+    return redirect_to_login('/image_downloader', redirect_field_name="next")
+
   if request.method == 'POST':
     form = ImageDownloaderForm(request.POST)
     if form.is_valid():

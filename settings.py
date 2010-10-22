@@ -106,3 +106,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.request',
 )
+
+LOGIN_URL = '/accounts/login'
+LOGIN_REDIRECT_URL = '/'

@@ -12,4 +12,8 @@ download as album. It may take a few minutes to complete.</p>
 {{ form.as_p }}
 <input type="submit" value="Download Album" />
 </form>
+
+{% if not user.is_anonymous %}
+  <a href="/accounts/logout">Logout</a>
+{% endif %}
 {% endblock %}
